@@ -4,7 +4,7 @@
              x:Class="TravelGuideUisrael.Sitios">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Pagina de sitios"
+            <Label Text="Pagina de sitios cambio 2"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
