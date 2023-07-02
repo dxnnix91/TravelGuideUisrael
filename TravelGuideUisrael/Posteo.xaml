@@ -4,7 +4,7 @@
              x:Class="TravelGuideUisrael.Posteo">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Pagina de Posteos"
+            <Label Text="Pagina de Posteos nuevos "
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
