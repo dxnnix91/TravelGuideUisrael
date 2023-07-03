@@ -10,7 +10,7 @@ namespace TravelGuideUisrael
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new Sitios());
         }
 
         protected override void OnStart()
