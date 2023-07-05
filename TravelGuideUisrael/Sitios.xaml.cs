@@ -19,7 +19,7 @@ namespace TravelGuideUisrael
 
         private void btnlogin_Clicked(object sender, EventArgs e)
         {
-            new NavigationPage(new Login());
+           Navigation.PushAsync(new Login());
         }
     }
 }
