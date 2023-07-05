@@ -10,16 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace TravelGuideUisrael
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Sitios : ContentPage
+    public partial class HomeDetail : ContentPage
     {
-        public Sitios()
+        public HomeDetail()
         {
             InitializeComponent();
-        }
-
-        private void btnlogin_Clicked(object sender, EventArgs e)
-        {
-           Navigation.PushAsync(new Login());
         }
     }
 }

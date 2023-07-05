@@ -1,32 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TravelGuideUisrael.Login" >
+             x:Class="TravelGuideUisrael.Login" BackgroundColor="#112B47">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Inicia Sesion para poder continuar" FontSize="35" HorizontalTextAlignment="Center"/>
-        <RelativeLayout >            
-            <Grid>                
-                <Image x:Name="main_Background" Source="logo.jpg.jpg" AbsoluteLayout.LayoutFlags="All"  VerticalOptions="FillAndExpand" Aspect="AspectFill" IsVisible="true" HeightRequest="650"></Image>
-            </Grid>
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <Label Text="Usuario" Grid.Row="0" Grid.Column="0" FontSize="35"/>
-                    <Label Text="Contrasena" Grid.Row="1" Grid.Column="0" FontSize="35"/>
-                    <Entry Text="Ingrese el usuario" Grid.Row="0" Grid.Column="1"></Entry>
-                    <Entry Text="Ingrese la contrasena" Grid.Row="1" Grid.Column="1"></Entry>
-                    <Button x:Name="btnpost" Text="Continuar" Clicked="btnpost_Clicked" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center"></Button>
-                </Grid>                
-            </RelativeLayout>            
+        <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand" >
+                             
+                          
+                <Image x:Name="main_Background" Source="central.jpeg" WidthRequest="180" HeightRequest="180"></Image>
+            
+               
+                    
+                    <Entry x:Name="txtusuario" Placeholder="Usuario" Grid.Row="0" Grid.Column="1"></Entry>
+                    <Entry x:Name="txtcontraseña" Placeholder="Contraseña" IsPassword="True" ></Entry>
+                    <Button x:Name="btnpost" Text="Log In" TextColor="White" BorderColor="ForestGreen" BorderWidth="1.5" CornerRadius="50" BackgroundColor="Transparent" Clicked="btnpost_Clicked" VerticalOptions="Center"></Button>
+
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="No tienes una Cuenta?   " TextColor="Gray"></Span>
+                        <Span Text="Registrarse" TextColor="Gray" FontAttributes="Bold" TextDecorations="Underline"></Span>
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

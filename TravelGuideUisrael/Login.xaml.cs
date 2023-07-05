@@ -19,7 +19,19 @@ namespace TravelGuideUisrael
 
         private void btnpost_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Posteo());
+            if (txtusuario.Text=="admin" && txtcontraseña.Text=="123")
+            {
+                Navigation.PushAsync(new Home());
+            }
+            else
+            {
+                DisplayAlert("Alerta", "Usuario o contrasena incorrectos","Cerrar");
+            }
+        }
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Registro());
         }
     }
 }
