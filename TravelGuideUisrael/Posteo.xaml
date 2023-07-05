@@ -4,9 +4,14 @@
              x:Class="TravelGuideUisrael.Posteo">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Pagina de Posteos nuevos "
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Postea tu experiencia en tu destino" FontSize="20" HorizontalTextAlignment="Center"/>
+
+            
+            <Entry x:Name="txtCalificacion" Placeholder="Califica tu experiencia del 1 al 5" ></Entry>
+            <Entry x:Name="txtcomentario" Placeholder="Cuentanos tu experiencia" ></Entry>
+            <Entry x:Name="txtfoto" Placeholder="Ingrese la foto" ></Entry>
+            <Entry x:Name="txtfecha" Placeholder="Ingrese la fecha" ></Entry>
+            <Button x:Name="btnIngresar" Text="Ingresar" Clicked="btnIngresar_Clicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

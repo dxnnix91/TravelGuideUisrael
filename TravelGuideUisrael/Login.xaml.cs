@@ -16,5 +16,10 @@ namespace TravelGuideUisrael
         {
             InitializeComponent();
         }
+
+        private void btnpost_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Posteo());
+        }
     }
 }
