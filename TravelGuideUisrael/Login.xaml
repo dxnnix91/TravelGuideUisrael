@@ -13,7 +13,7 @@
                     <Entry x:Name="txtusuario" Placeholder="Usuario" Grid.Row="0" Grid.Column="1"></Entry>
                     <Entry x:Name="txtcontraseña" Placeholder="Contraseña" IsPassword="True" ></Entry>
                     <Button x:Name="btnpost" Text="Log In" TextColor="White" BorderColor="ForestGreen" BorderWidth="1.5" CornerRadius="50" BackgroundColor="Transparent" Clicked="btnpost_Clicked" VerticalOptions="Center"></Button>
-
+            <Button x:Name="btnlogingoogle" Text="Log In con Goolge" TextColor="White" BorderColor="ForestGreen" BorderWidth="1.5" CornerRadius="50" BackgroundColor="Transparent" Clicked="btnlogingoogle_Clicked" VerticalOptions="Center"></Button>
             <Label HorizontalOptions="Center">
                 <Label.FormattedText>
                     <FormattedString>

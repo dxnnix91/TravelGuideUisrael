@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using SampleApp.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -32,6 +32,11 @@ namespace TravelGuideUisrael
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             Navigation.PushAsync(new Registro());
+        }
+
+        private void btnlogingoogle_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync (new LoginPage());
         }
     }
 }

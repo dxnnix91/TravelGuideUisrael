@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "781650662937",
+    "project_id": "travelguide-b7ba4",
+    "storage_bucket": "travelguide-b7ba4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781650662937:android:ffd63f8f36d57db4cf7c88",
+        "android_client_info": {
+          "package_name": "com.companyname.travelguideuisrael"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "781650662937-tll15vljurhaqnbmrktnpnr493rgsp39.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.companyname.travelguideuisrael",
+            "certificate_hash": "fba2a5b527fc732814700ddfa8befb80ab1b950e"
+          }
+        },
+        {
+          "client_id": "781650662937-eucsdlmbuj2sdb715qa2kaagt09ucb7g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4nbA6OT9Er3XXS3jLbRwDyTKC3H5JZkM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "781650662937-cfrbnrflil1otrnuoh91tc765c1sd5cd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
