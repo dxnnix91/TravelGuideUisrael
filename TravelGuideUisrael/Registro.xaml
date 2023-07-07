@@ -4,9 +4,33 @@
              x:Class="TravelGuideUisrael.Registro">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Carlos"
+            <Label Text="Regsitro"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label x:Name="lblNombre" Text="Nombre" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Grid.Row="0" Grid.Column="0"></Label>
+                <Label x:Name="lblApellido" Text="txtApellido" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Grid.Row="1" Grid.Column="0"/>
+                <Label x:Name="lblEdad" Text="txtEdad" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Grid.Row="2" Grid.Column="0"/>
+                <Label x:Name="lblMail" Text="txtMail" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Grid.Row="3" Grid.Column="0"/>
+                <Entry x:Name:"txtNombre" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Grid.Row="0" Grid.Column="1"></Entry>
+                <Entry x:Name:"txtApellido" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Grid.Row="0" Grid.Column="1"></Entry>
+                <Entry x:Name:"txtNombre" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Grid.Row="0" Grid.Column="1"></Entry>
+                <Entry x:Name:"txtNombre" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Grid.Row="0" Grid.Column="1"></Entry>
+
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
