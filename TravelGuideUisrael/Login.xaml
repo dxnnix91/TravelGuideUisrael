@@ -6,7 +6,7 @@
         <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand" >
                              
                           
-                <Image x:Name="main_Background" Source="central.jpeg" WidthRequest="180" HeightRequest="180"></Image>
+                <Image x:Name="main_Background" Source="logoVerdeNew.png" WidthRequest="180" HeightRequest="180" BackgroundColor="#112B47"></Image>
             
                
                     

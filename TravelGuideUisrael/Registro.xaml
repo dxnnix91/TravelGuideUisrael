@@ -1,14 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TravelGuideUisrael.Registro">
+             x:Class="TravelGuideUisrael.Registro" BackgroundColor="#112B47">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Regsitro"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Registro" VerticalTextAlignment="Start" HorizontalTextAlignment="Center" TextColor="White" FontSize="20"/>
 
-            <Grid>
+            <Grid VerticalOptions="Center" HorizontalOptions="Start" Margin="30">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition/>
@@ -21,15 +19,17 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <Label x:Name="lblNombre" Text="Nombre" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Grid.Row="0" Grid.Column="0"></Label>
-                <Label x:Name="lblApellido" Text="txtApellido" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Grid.Row="1" Grid.Column="0"/>
-                <Label x:Name="lblEdad" Text="txtEdad" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Grid.Row="2" Grid.Column="0"/>
-                <Label x:Name="lblMail" Text="txtMail" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Grid.Row="3" Grid.Column="0"/>
-                <Entry x:Name="txtNombre1" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Grid.Row="0" Grid.Column="1"></Entry>
-                <Entry x:Name="txtApellido" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Grid.Row="0" Grid.Column="1"></Entry>
+                <Label x:Name="lblNombre" Text="Nombre" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Grid.Row="0" Grid.Column="0" TextColor="White" ></Label>
+                <Label x:Name="lblApellido" Text="Apellido" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Grid.Row="1" Grid.Column="0" TextColor="White"/>
+                <Label x:Name="lblEdad" Text="Edad" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Grid.Row="2" Grid.Column="0" TextColor="White"/>
+                <Label x:Name="lblMail" Text="Mail" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Grid.Row="3" Grid.Column="0" TextColor="White"/>
+                <Entry x:Name="txtNombre"  Grid.Row="0" Grid.Column="1"></Entry>
+                <Entry x:Name="txtApellido"  Grid.Row="1" Grid.Column="1"></Entry>
+                <Entry x:Name="txtEdad" Grid.Row="2" Grid.Column="1" Keyboard="Numeric"></Entry>
+                <Entry x:Name="txtMail" Grid.Row="3" Grid.Column="1"></Entry>
                 
-
             </Grid>
+            <Button x:Name="btnRegistrar" Text="Registrar" Clicked="btnRegistrar_Clicked" HorizontalOptions="Center" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

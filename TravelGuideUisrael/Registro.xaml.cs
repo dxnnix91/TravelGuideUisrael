@@ -16,5 +16,10 @@ namespace TravelGuideUisrael
 		{
 			InitializeComponent ();
 		}
+
+		private void btnRegistrar_Clicked(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
