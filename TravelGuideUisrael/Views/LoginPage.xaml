@@ -25,6 +25,8 @@
 
                     <Button Text="Logout" CornerRadius="6" BackgroundColor="Tomato" TextColor="White" 
                         FontAttributes="Bold" FontSize="20" Margin="0,8,0,0" x:Name="btnLogout" Clicked="btnLogout_Clicked"/>
+                    <Button Text="Continuar" CornerRadius="6" BackgroundColor="Tomato" TextColor="White" 
+                        FontAttributes="Bold" FontSize="20" Margin="0,8,0,0" x:Name="btnContinuar" Clicked="btnContinuar_Clicked"/>
                 </StackLayout>
             </ScrollView>
         </Grid>

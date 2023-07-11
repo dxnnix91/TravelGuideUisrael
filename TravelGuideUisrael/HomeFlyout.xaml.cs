@@ -6,7 +6,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-
+using SampleApp.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -35,8 +35,8 @@ namespace TravelGuideUisrael
                 {
                     new HomeFlyoutMenuItem { Id = 0, Title = "Mi cuenta", TargetType=typeof(Registro) },
                     new HomeFlyoutMenuItem { Id = 1, Title = "Postear",TargetType=typeof(Posteo)  },
-                    //new HomeFlyoutMenuItem { Id = 2, Title = "Comentar" },
-                   // new HomeFlyoutMenuItem { Id = 3, Title = "Salir" },
+                    new HomeFlyoutMenuItem { Id = 2, Title = "Mapa",TargetType=typeof(HomeDetail) },
+                    new HomeFlyoutMenuItem { Id = 3, Title = "Salir",TargetType=typeof(LoginPage) },
                     
                 });
             }
