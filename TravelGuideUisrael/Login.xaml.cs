@@ -10,6 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace TravelGuideUisrael
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+
     public partial class Login : ContentPage
     {
         public Login()
@@ -25,7 +26,8 @@ namespace TravelGuideUisrael
             }
             else
             {
-                DisplayAlert("Alerta", "Usuario o contrasena incorrectos","Cerrar");
+                var mensaje = "Datos erroneos!!!";
+                DependencyService.Get<Mensaje>().longAlert(mensaje);
             }
         }
 
