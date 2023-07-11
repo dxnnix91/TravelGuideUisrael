@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using SampleApp.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -20,6 +21,9 @@ namespace TravelGuideUisrael
 
         private void btnpost_Clicked(object sender, EventArgs e)
         {
+            String usuario = txtusuario.Text;
+            String correo = txtcontraseña.Text;
+
             if (txtusuario.Text=="admin" && txtcontraseña.Text=="123")
             {
                 Navigation.PushAsync(new Home());

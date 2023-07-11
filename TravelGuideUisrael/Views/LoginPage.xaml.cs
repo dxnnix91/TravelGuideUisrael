@@ -38,8 +38,8 @@ namespace SampleApp.Views
             if (googleUser != null)
             {
                 GoogleUser = googleUser;
-                txtName.Text = GoogleUser.Name;
-                txtEmail.Text = GoogleUser.Email;
+                txtName.Text = "Nombre: "+GoogleUser.Name;
+                txtEmail.Text = "Correo: "+GoogleUser.Email;
                 imgProfile.Source = GoogleUser.Picture;
                 IsLogedIn = true;
             }
@@ -56,7 +56,11 @@ namespace SampleApp.Views
         private void btnLogout_Clicked(object sender, EventArgs e)
         {
             _googleManager.Logout();
-
+            
+            String usuario = txtName.Text;
+            String correo = txtEmail.Text;
+            //Image imagen = imgProfile.Source;
+            
             txtName.Text = "Name :";
             txtEmail.Text = "Email: ";
             imgProfile.Source = "";
@@ -64,6 +68,7 @@ namespace SampleApp.Views
 
         private void btnContinuar_Clicked(object sender, EventArgs e)
         {
+            
             Navigation.PushAsync(new Home());
         }
     }

@@ -7,10 +7,10 @@
     <pages:HomeFlyout x:Name="FlyoutPage" />
   </FlyoutPage.Flyout>
   <FlyoutPage.Detail>
-    <NavigationPage>
+      <NavigationPage>        
       <x:Arguments>
-        <pages:HomeDetail />
-      </x:Arguments>
+                <pages:HomeDetail/>
+            </x:Arguments>
     </NavigationPage>
   </FlyoutPage.Detail>
 </FlyoutPage>

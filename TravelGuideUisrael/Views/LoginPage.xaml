@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design" NavigationPage.HasNavigationBar="False"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" BackgroundImageSource="background.jpg"
-             x:Class="SampleApp.Views.LoginPage">
+             x:Class="SampleApp.Views.LoginPage" BackgroundColor="#112B47">
     <ContentPage.Content>
         <Grid RowSpacing="0" Padding="0">
             <Grid.RowDefinitions>
@@ -16,17 +16,15 @@
             </Grid>
             <ScrollView Grid.Row="1" Padding="10">
                 <StackLayout Spacing="0">
-                    <Label Text="Name: " x:Name="txtName" FontSize="18" />
-                    <Label Text="Email: " x:Name="txtEmail" FontSize="18" />
+                    <Label Text="Name: " x:Name="txtName" FontSize="25" TextColor="Wheat"/>
+                    <Label Text="Email: " x:Name="txtEmail" FontSize="25" TextColor="Wheat"/>
                     <Image x:Name="imgProfile" WidthRequest="150" HeightRequest="150"/>
 
-                    <Button Text="Login with Gmail" CornerRadius="6" BackgroundColor="Tomato" TextColor="White" 
-                        FontAttributes="Bold" FontSize="20" Margin="0,8,0,0" x:Name="btnLogin" Clicked="btnLogin_Clicked"/>
+                    <Button Text="Login with Gmail" TextColor="White" BorderColor="ForestGreen" BorderWidth="1.5" CornerRadius="50" BackgroundColor="Transparent" Margin="0,8,0,0" x:Name="btnLogin" Clicked="btnLogin_Clicked"/>
 
-                    <Button Text="Logout" CornerRadius="6" BackgroundColor="Tomato" TextColor="White" 
-                        FontAttributes="Bold" FontSize="20" Margin="0,8,0,0" x:Name="btnLogout" Clicked="btnLogout_Clicked"/>
-                    <Button Text="Continuar" CornerRadius="6" BackgroundColor="Tomato" TextColor="White" 
-                        FontAttributes="Bold" FontSize="20" Margin="0,8,0,0" x:Name="btnContinuar" Clicked="btnContinuar_Clicked"/>
+                    <Button Text="Logout" TextColor="White" BorderColor="ForestGreen" BorderWidth="1.5" CornerRadius="50" BackgroundColor="Transparent" Margin="0,8,0,0" x:Name="btnLogout" Clicked="btnLogout_Clicked"/>
+
+                    <Button Text="Continuar" TextColor="White" BorderColor="ForestGreen" BorderWidth="1.5" CornerRadius="50" BackgroundColor="Transparent" Margin="0,8,0,0" x:Name="btnContinuar" Clicked="btnContinuar_Clicked"/>
                 </StackLayout>
             </ScrollView>
         </Grid>

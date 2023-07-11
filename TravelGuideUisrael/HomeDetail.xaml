@@ -3,9 +3,20 @@
              xmlns:Maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TravelGuideUisrael.HomeDetail"
-             Title="Travel Guide">
+             Title="Travel Guide" BackgroundColor="#112B47">
   <StackLayout Padding="10">
-    <Label Text="Aqui va ir el mapa."/>
+      <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>                
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Tu guia favorito de viaje" FontSize="15" Grid.Column="0" TextColor="Wheat" FontAttributes="Italic" VerticalOptions="Center"/>
+            <Image x:Name="main_Background" Source="logoVerdeNew.png" WidthRequest="60" HeightRequest="60" BackgroundColor="#112B47" Grid.Column="1"></Image>
+        </Grid>
         <Maps:Map/>
     </StackLayout>
 </ContentPage>

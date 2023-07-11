@@ -12,10 +12,13 @@ namespace TravelGuideUisrael
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Home : FlyoutPage
     {
+       
+
         public Home()
         {
             InitializeComponent();
             FlyoutPage.ListView.ItemSelected += ListView_ItemSelected;
+            
         }
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
