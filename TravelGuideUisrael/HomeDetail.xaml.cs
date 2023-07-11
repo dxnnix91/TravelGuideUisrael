@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
 
 namespace TravelGuideUisrael
@@ -17,7 +18,12 @@ namespace TravelGuideUisrael
            
             InitializeComponent();
             
+            mymap.MoveToRegion (MapSpan.FromCenterAndRadius(
+                new Position(-0.3387534, -78.5369914),
+                Distance.FromKilometers(30)));
 
+            
+            
         }
     }
 }
