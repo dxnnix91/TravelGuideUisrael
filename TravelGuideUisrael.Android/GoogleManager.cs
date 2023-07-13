@@ -21,10 +21,13 @@ using Xamarin.Forms;
 [assembly: Dependency(typeof(GoogleManager))]
 namespace SampleApp.Droid
 {
-	public class GoogleManager : Java.Lang.Object, IGoogleManager, GoogleApiClient.IConnectionCallbacks, GoogleApiClient.IOnConnectionFailedListener
+    [Obsolete]
+    public class GoogleManager : Java.Lang.Object, IGoogleManager, GoogleApiClient.IConnectionCallbacks, GoogleApiClient.IOnConnectionFailedListener
 	{
 		public Action<GoogleUser, string> _onLoginComplete;
-		public static GoogleApiClient _googleApiClient { get; set; }
+
+        [Obsolete]
+        public static GoogleApiClient _googleApiClient { get; set; }
 		public static GoogleManager Instance { get; private set; }
 		Context _context;
 
@@ -34,7 +37,8 @@ namespace SampleApp.Droid
 			Instance = this;
 		}
 
-		public void Login(Action<GoogleUser, string> onLoginComplete)
+        [Obsolete]
+        public void Login(Action<GoogleUser, string> onLoginComplete)
 		{
 			GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DefaultSignIn)
 															 .RequestEmail()
