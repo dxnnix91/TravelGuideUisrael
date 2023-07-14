@@ -11,7 +11,11 @@
             <Entry x:Name="txtcomentario" Placeholder="Cuentanos tu experiencia" ></Entry>
             <Entry x:Name="txtfoto" Placeholder="Ingrese la foto" ></Entry>
             <Entry x:Name="txtfecha" Placeholder="Ingrese la fecha" ></Entry>
+            <Picker x:Name="combousuario" Title="Usuario" SelectedIndexChanged="combousuario_SelectedIndexChanged">                
+            </Picker>
+            <Label x:Name="txtid" Text=""/>
             <Button x:Name="btnIngresar" Text="Ingresar" Clicked="btnIngresar_Clicked"></Button>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

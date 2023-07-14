@@ -12,6 +12,7 @@
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
+                    <RowDefinition/>
                 </Grid.RowDefinitions>
 
                 <Grid.ColumnDefinitions>
@@ -23,10 +24,12 @@
                 <Label x:Name="lblApellido" Text="Apellido" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Grid.Row="1" Grid.Column="0" TextColor="White"/>
                 <Label x:Name="lblEdad" Text="Edad" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Grid.Row="2" Grid.Column="0" TextColor="White"/>
                 <Label x:Name="lblMail" Text="Mail" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Grid.Row="3" Grid.Column="0" TextColor="White"/>
+                <Label x:Name="lblClave" Text="Contraseña" HorizontalTextAlignment="Start" VerticalTextAlignment="Start" Grid.Row="4" Grid.Column="0" TextColor="White"/>
                 <Entry x:Name="txtNombre"  Grid.Row="0" Grid.Column="1"></Entry>
                 <Entry x:Name="txtApellido"  Grid.Row="1" Grid.Column="1"></Entry>
                 <Entry x:Name="txtEdad" Grid.Row="2" Grid.Column="1" Keyboard="Numeric"></Entry>
                 <Entry x:Name="txtMail" Grid.Row="3" Grid.Column="1"></Entry>
+                <Entry x:Name="txtClave" Grid.Row="4" Grid.Column="1" IsPassword="True"></Entry>
                 
             </Grid>
             <Button x:Name="btnRegistrar" Text="Registrar" Clicked="btnRegistrar_Clicked" HorizontalOptions="Center" />
