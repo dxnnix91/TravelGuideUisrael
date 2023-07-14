@@ -117,8 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="String1" xml:space="preserve">
-    <value>Server=https://uisraeltravelguide.000webhostapp.com/TravelGuideWS;Database=id20983026_uisrael;Uid=id20983026_admin;Pwd=7]1KbPlqQ\*\dR@6;</value>
+  <data name="Conexion" xml:space="preserve">
+    <value>Server=sql10.freemysqlhosting.net;Database=sql10632630;Uid=sql10632630;Pwd=cTAlAsDSWx;</value>
     <comment>Conexion</comment>
   </data>
 </root>

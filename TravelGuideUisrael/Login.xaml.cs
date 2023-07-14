@@ -19,27 +19,59 @@ namespace TravelGuideUisrael
         public Login()
         {
             InitializeComponent();
+            
         }
 
         private void btnpost_Clicked(object sender, EventArgs e)
         {
-            String usuario = txtusuario.Text;
-            String correo = txtcontraseña.Text;
+            //String usuario = txtusuario.Text;
+            //String correo = txtcontraseña.Text;
 
-            if (txtusuario.Text == "admin" && txtcontraseña.Text == "123")
+            //if (txtusuario.Text == "admin" && txtcontraseña.Text == "123")
+            //{
+            //    Navigation.PushAsync(new Home());
+            //}
+            //else
+            //{
+            //    var mensaje = "Datos erroneos!!!";
+            //    DependencyService.Get<Mensaje>().longAlert(mensaje);
+            //}
+            var conexion = new MySqlConnection(Properties.Resources.Conexion);
+            conexion.Open();
+
+            var cmd = new MySqlCommand("Select * From usuario where correo='" + txtusuario.Text + "'and clave='" + txtcontraseña.Text + "'", conexion);
+            var rd = cmd.ExecuteReader();
+
+            if (rd.Read())
             {
+                
+                var mensaje = "Datos Correctos";
+                DependencyService.Get<Mensaje>().longAlert(mensaje);
                 Navigation.PushAsync(new Home());
             }
             else
             {
-                var mensaje = "Datos erroneos!!!";
+                var mensaje = "Datos Incorrectos";
                 DependencyService.Get<Mensaje>().longAlert(mensaje);
             }
         }
         private void Conexion()
         {
-            var conexion = new MySqlConnection(Properties.Resources.String1);
+            var conexion = new MySqlConnection(Properties.Resources.Conexion);
             conexion.Open();
+
+            var cmd = new MySqlCommand("Select * From usuario where correo='" + txtusuario.Text + "'and clave='" + txtcontraseña.Text + "'", conexion);
+            var rd = cmd.ExecuteReader();
+
+            if(rd.Read())
+                 {
+                DisplayAlert("Information", "Login succes", "OK");
+            }
+            else
+            {
+                DisplayAlert("Information", "Login not succes", "OK");
+            }
+
         }
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {

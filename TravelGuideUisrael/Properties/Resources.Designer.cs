@@ -61,11 +61,11 @@ namespace TravelGuideUisrael.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Server=https://uisraeltravelguide.000webhostapp.com/TravelGuideWS;Database=id20983026_uisrael;Uid=id20983026_admin;Pwd=7]1KbPlqQ\*\dR@6;.
+        ///   Busca una cadena traducida similar a Server=sql10.freemysqlhosting.net;Database=sql10632630;Uid=sql10632630;Pwd=cTAlAsDSWx;.
         /// </summary>
-        internal static string String1 {
+        internal static string Conexion {
             get {
-                return ResourceManager.GetString("String1", resourceCulture);
+                return ResourceManager.GetString("Conexion", resourceCulture);
             }
         }
     }
