@@ -65,5 +65,10 @@ namespace TravelGuideUisrael
             }
             rd.Close();
         }
+
+        private void btnFoto_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync (new Foto());
+        }
     }
 }

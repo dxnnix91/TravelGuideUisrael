@@ -1,9 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.travelguideuisrael" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33" />
-	<application android:label="TravelGuideUisrael.Android" android:theme="@style/MainTheme" android:icon="@drawable/logoVerdeNew">
+	<application android:label="TravelGuideUisrael.Android" android:theme="@style/MainTheme" android:icon="@drawable/logoverdenew">
+	
+	
+	
+		
 		<uses-library android:name="org.apache.http.legacy" android:required="false" />
 		<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBcDdi5Quk69U2SpBbiReGjNOYsX3cxvrg" />
+		
+		<provider android:name="androidx.core.content.FileProvider" 
+				  android:authorities="com.companyname.travelguideuisrael.fileprovider" 
+				  android:exported="false" android:grantUriPermissions="true">
+			<meta-data android:name="android.support.FILE_PROVIDER_PATHS" 
+					   android:resource="@xml/rutas_archivos"></meta-data>
+			
+		</provider>
 	</application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -12,4 +24,7 @@
 	<uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
 	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 </manifest>

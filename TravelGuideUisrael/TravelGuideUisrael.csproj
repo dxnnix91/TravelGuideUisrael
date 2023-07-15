@@ -16,6 +16,7 @@
     <PackageReference Include="MySql.Data" Version="8.0.33" />
     <PackageReference Include="MySqlConnector" Version="2.2.6" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Xam.Plugin.Media" Version="6.0.2" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2578" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.7" />
     <PackageReference Include="Xamarin.Forms.Maps" Version="5.0.0.2578" />
@@ -30,6 +31,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Foto.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Home.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
