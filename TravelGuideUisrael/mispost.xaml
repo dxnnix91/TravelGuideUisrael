@@ -4,12 +4,9 @@
              x:Class="TravelGuideUisrael.mispost">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Lugares que he visitado" FontSize="30" HorizontalOptions="Center" />
-
-            <StackLayout>
-                
-            </StackLayout>
-
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

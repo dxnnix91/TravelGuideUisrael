@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using MySql.Data.MySqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MySqlConnector;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace TravelGuideUisrael
 {
-    
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class mispost : ContentPage
     {
         private ListView listView;
@@ -14,7 +17,6 @@ namespace TravelGuideUisrael
         public mispost()
         {
             InitializeComponent();
-
             items = new List<string>();
 
             // Crear una instancia del ListView
@@ -25,12 +27,12 @@ namespace TravelGuideUisrael
 
             // Asignar la lista de elementos como origen de datos del ListView
             listView.ItemsSource = items;
+
             // Agregar el ListView al contenido de la página
             Content = new StackLayout
             {
                 Children = { listView }
             };
-            
         }
 
         private void LoadData()
@@ -46,7 +48,7 @@ namespace TravelGuideUisrael
                     connection.Open();
 
                     // Consulta SQL para obtener los datos
-                    string query = "SELECT calificacion FROM post";
+                    string query = "SELECT * FROM post";
 
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
@@ -55,7 +57,7 @@ namespace TravelGuideUisrael
                             while (reader.Read())
                             {
                                 // Obtener el valor de la columna deseada (por ejemplo, "nombre")
-                                string nombre = reader.GetString("calificacion");
+                                string nombre = reader.GetString("calificacion")+("comentario");
 
                                 // Agregar el valor a la lista de elementos
                                 items.Add(nombre);
@@ -75,3 +77,4 @@ namespace TravelGuideUisrael
         }
     }
 }
+    

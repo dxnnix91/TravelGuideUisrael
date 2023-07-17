@@ -33,11 +33,7 @@ namespace TravelGuideUisrael
             // Agregar un controlador de eventos para el evento MapClicked
             mymap.MapClicked += Mapa_MapClicked;
 
-            // Agregar el mapa al contenido de la página
-            Content = new StackLayout
-            {
-                Children = { mymap }
-            };
+            
 
         }
 
