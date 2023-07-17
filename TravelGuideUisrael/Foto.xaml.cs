@@ -25,22 +25,28 @@ namespace TravelGuideUisrael
         {
 			try
 			{
+
 				var miFoto = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions()
 				{
+					
 					DefaultCamera = Plugin.Media.Abstractions.CameraDevice.Rear,
 					Name = DateTime.Now.ToString(),
 					Directory = "FotosAlmacenadas",
 					SaveToAlbum = true
-				});
-				if (miFoto != null)
+
+				}) ;
+                
+                if (miFoto != null)
 				{
 					imageCamera.Source = ImageSource.FromStream(() => { return miFoto.GetStream(); });
-				}
+                                        
+                }
 			}
 			catch (Exception ex)
 			{
 				await DisplayAlert("Error", ex.Message.ToString(), "Ok");
 			}
+			
         }
     }
 }

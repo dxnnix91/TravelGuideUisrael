@@ -4,25 +4,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySqlConnector;
+using Plugin.Media.Abstractions;
+using Plugin.Media;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using Xamarin.Forms.Xaml;
+using System.Security.Cryptography.X509Certificates;
 
 namespace TravelGuideUisrael
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Posteo : ContentPage
     {
+        
         public Posteo()
         {
             InitializeComponent();
+            
+            
         }
-
-        private void btnIngresar_Clicked(object sender, EventArgs e)
+        
+        public void btnIngresar_Clicked(object sender, EventArgs e)
         {
             var conexion = new MySqlConnection(Properties.Resources.Conexion);
             conexion.Open();
 
-            var cmd = new MySqlCommand("Insert into post (calificacion, comentario, fecha, Usuario_idUsuario) values('" + txtCalificacion.Text + "','" + txtcomentario.Text + "','" + txtfecha.Text + "','" + txtid.Text + "')", conexion);
+            String fecha = txtfecha.Date.ToString("yyyy/MM/dd");
+            String fecha1 = txtfecha.Date.TimeOfDay.ToString();
+            txtfoto.Text = fecha1 + "/" + fecha;            
+            
+
+            var cmd = new MySqlCommand("Insert into post (calificacion, comentario, imagen, fecha, Usuario_idUsuario) values('" + txtCalificacion.Text + "','" + txtcomentario.Text + "','"+txtfoto.Text+ "','" + fecha + "','" + txtid.Text + "')", conexion);
             var rd = cmd.ExecuteReader();
 
             var mensaje = "Datos Correctamente ingresados";
@@ -69,6 +81,15 @@ namespace TravelGuideUisrael
         private void btnFoto_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync (new Foto());
+            String fecha = txtfecha.Date.ToString("yyyy/MM/dd");
+            String fecha1 = txtfecha.Date.TimeOfDay.ToString();
+            txtfoto.Text = fecha1+"/"+fecha;
+        }
+
+        private void txtfecha_DateSelected(object sender, DateChangedEventArgs e)
+        {
+            String fecha = txtfecha.Date.ToString("yyyy/MM/dd");
+            txtfoto.Text = fecha;
         }
     }
 }

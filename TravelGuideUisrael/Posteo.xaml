@@ -19,14 +19,17 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Entry x:Name="txtCalificacion" Placeholder="Califica tu experiencia del 1 al 5" Grid.Row="0" Grid.Column="0"></Entry>
+                <Entry x:Name="txtCalificacion" Placeholder="Califica tu experiencia del 1 al 5" Grid.Row="0" Grid.Column="0" Keyboard="Numeric"></Entry>
                     <Entry x:Name="txtcomentario" Placeholder="Cuentanos tu experiencia" Grid.Row="1" Grid.Column="0"></Entry>
                     <Entry x:Name="txtfoto" Placeholder="Ingrese la foto" Grid.Row="2" Grid.Column="0"></Entry>
+                <DatePicker x:Name="txtfecha" Grid.Row="3" Grid.Column="0" DateSelected="txtfecha_DateSelected"></DatePicker>
                     <Button x:Name="btnFoto" Text="Tomar foto" Clicked="btnFoto_Clicked" Grid.Row="2" Grid.Column="1"></Button>
-                    <Entry x:Name="txtfecha" Placeholder="Ingrese la fecha" Grid.Row="3" Grid.Column="0"></Entry>
+                    
                     <Picker x:Name="combousuario" Title="Usuario" SelectedIndexChanged="combousuario_SelectedIndexChanged" Grid.Row="4" Grid.Column="0">
                 </Picker>
-                    <Label x:Name="txtid" Text="" Grid.Row="5" Grid.Column="0"/>
+                <Label x:Name="txtid" Text="" Grid.Row="5" Grid.Column="0"/>
+                <Label x:Name="txtfechasel" Text="" Grid.Row="5" Grid.Column="0"/>
+                
             </Grid>
             <Button x:Name="btnIngresar" Text="Ingresar" Clicked="btnIngresar_Clicked"></Button>
             
