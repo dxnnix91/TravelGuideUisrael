@@ -18,5 +18,6 @@
             <Image x:Name="main_Background" Source="logoVerdeNew.png" WidthRequest="60" HeightRequest="60" BackgroundColor="#112B47" Grid.Column="1"></Image>
         </Grid>
         <Maps:Map MapType="Street" x:Name="mymap" />
+      
     </StackLayout>
 </ContentPage>

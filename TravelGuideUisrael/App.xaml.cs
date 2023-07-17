@@ -11,6 +11,7 @@ namespace TravelGuideUisrael
             InitializeComponent();
 
             MainPage = new NavigationPage(new Login());
+            
         }
 
         protected override void OnStart()
