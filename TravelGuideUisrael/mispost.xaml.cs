@@ -57,10 +57,12 @@ namespace TravelGuideUisrael
                             while (reader.Read())
                             {
                                 // Obtener el valor de la columna deseada (por ejemplo, "nombre")
-                                string nombre = reader.GetString("calificacion")+("comentario");
+                                string calificacion = reader.GetString("calificacion");
+                                string comentario = reader.GetString("comentario");
+                                
 
                                 // Agregar el valor a la lista de elementos
-                                items.Add(nombre);
+                                items.Add(calificacion+"       "+comentario);
                             }
                         }
                     }
