@@ -34,7 +34,7 @@ namespace TravelGuideUisrael
             {
                 MenuItems = new ObservableCollection<HomeFlyoutMenuItem>(new[]
                 {
-                    new HomeFlyoutMenuItem { Id = 0, Title = "Mi cuenta", TargetType=typeof(Registro) },
+                    new HomeFlyoutMenuItem { Id = 0, Title = "Mi cuenta", TargetType=typeof(ActualizarUser) },
                     new HomeFlyoutMenuItem { Id = 1, Title = "Postear",TargetType=typeof(Posteo)  },
                     new HomeFlyoutMenuItem { Id = 2, Title = "Mis Posts",TargetType=typeof(mispost) },
                     new HomeFlyoutMenuItem { Id = 3, Title = "Mapa",TargetType=typeof(HomeDetail) },

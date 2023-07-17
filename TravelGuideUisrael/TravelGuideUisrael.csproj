@@ -31,6 +31,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="ActualizarUser.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Foto.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
