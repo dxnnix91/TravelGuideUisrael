@@ -71,12 +71,25 @@ namespace TravelGuideUisrael
             var conexion = new MySqlConnection(Properties.Resources.Conexion);
             conexion.Open();
 
-            var cmd = new MySqlCommand("DELETE FROM usuario WHERE idUsuario ="+iduser.Text, conexion);
-            var rd = cmd.ExecuteReader();
+            
+            try
+            {
+                var cmd = new MySqlCommand("DELETE FROM usuario WHERE idUsuario =" + iduser.Text, conexion);
+                var rd = cmd.ExecuteReader();
+                rd.Read();
+                
+                    var mensaje = "Usuario Eliminado";
+                    DependencyService.Get<Mensaje>().longAlert(mensaje);
+                    Navigation.PushAsync(new Home());
 
-            var mensaje = "Datos Correctamente Actualizados";
-            DependencyService.Get<Mensaje>().longAlert(mensaje);
-            Navigation.PushAsync(new Home());
+                
+            }
+            catch (Exception)
+            {
+
+                var mensaje = "No puedes eliminar un ususario con posts activos";
+                DependencyService.Get<Mensaje>().longAlert(mensaje);
+            }
         }
     }
 }
